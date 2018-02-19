@@ -14,4 +14,4 @@ Highlights
 <img width="1277" alt="screen shot 2018-02-19 at 11 13 04" src="https://user-images.githubusercontent.com/25067011/36387168-2ec02c98-1566-11e8-9140-ebd372e06834.png">
 
 
-
+* Credits of the tutorial to Matt Huddleston (https://huddlehouse.io/)
