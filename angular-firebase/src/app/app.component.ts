@@ -13,11 +13,12 @@ export class AppComponent {
   public isLoggedIn: boolean;
   
   constructor(public afService: AF, private router: Router) {
+    
     this.afService.af.authState.subscribe((auth) => {
         if(auth == null) {
           console.log("Not Logged in.");
-          this.router.navigate(['login']);
           this.isLoggedIn = false;
+          this.router.navigate(['login']);
         }
         else {
           console.log("Successfully Logged in.");

@@ -36,5 +36,22 @@ export class AF {
     };
     this.afd.list('messages').push(message);
   }
+
+  registerUser(email, password) {
+    console.log(email)
+    return this.af.auth.createUserAndRetrieveDataWithEmailAndPassword(email, password);
+  }
+
+  saveUserInfoFromForm(uid, name, email) {
+    return this.afd.object('registeredUsers/' + uid).set( { name: name, email: email } );
+  }
+
+  loginWithEmail(email, password) {
+    return this.af.auth.signInWithEmailAndPassword (email, password);
+  }
+
+  addUserInfo(){
+    this.afd.list('users').push( { email: this.email, displayName: this.displayName } );
+  }
 }
 
