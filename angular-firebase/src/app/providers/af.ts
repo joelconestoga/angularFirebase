@@ -43,7 +43,7 @@ export class AF {
   }
 
   saveUserInfoFromForm(uid, name, email) {
-    return this.afd.object('registeredUsers/' + uid).set( { name: name, email: email } );
+    return this.afd.object('registeredUsers/' + uid).set( { name: name, email: email, displayName: name } );
   }
 
   loginWithEmail(email, password) {

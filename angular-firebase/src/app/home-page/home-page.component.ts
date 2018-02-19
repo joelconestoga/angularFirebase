@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 import { AngularFireList } from 'angularfire2/database';
 import { AF } from '../providers/af';
 import { Observable } from 'rxjs/Observable';
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent implements OnInit, AfterViewChecked {
+export class HomePageComponent implements AfterViewChecked {
 
   public newMessage: string;
   public messages: Observable<any>;
@@ -18,8 +18,6 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
   constructor(public afService: AF) {
     this.messages = this.afService.messages;
   }
-
-  ngOnInit() {}
 
   ngAfterViewChecked(): void {
     this.scrollToBottom();
